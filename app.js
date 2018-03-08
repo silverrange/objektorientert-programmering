@@ -3,9 +3,9 @@ const mysql = require('mysql');
 // Setup MySQL-server connection
 const connection = mysql.createConnection({
   host     : 'mysql.stud.iie.ntnu.no',
-  user     : '[phillia]',  // Replace [username] with your username
-  password : '[CBCXMbGn]',     // Replace [password] with your password
-  database : '[phillia]'   // Replace [username] with your username
+  user     : 'phillia',  // Replace [username] with your username
+  password : 'CBCXMbGn',     // Replace [password] with your password
+  database : 'phillia'   // Replace [username] with your username
 });
 
 // Connect to MySQL-server
