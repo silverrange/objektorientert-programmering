@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="skrivUt();">
+
+<p> Anniken: </p>
+<button onclick="Anniken.gass();skrivUt()">Gass</button><br>
+<button onclick="Anniken.brems();skrivUt()">Brems</button><br>
+<div id="utdata"></div>
+<p> Jonathan: </p>
+<button onclick="Jonathan.gass();skrivUt()">Gass</button><br>
+<button onclick="Jonathan.gass();skrivUt()">Brems</button><br>
+<div id="utdata1"></div>
+<p> Marion: </p>
+<button onclick="Marion.gass();skrivUt()">Gass</button><br>
+<button onclick="Marion.gass();skrivUt()">Brems</button><br>
+<div id="utdata2"></div>
+
+
+    <script>
+
+class Bil {
+  constructor(registreringsnr, merke, orsmodell, hastighet) {
+    this.registreringsnr = registreringsnr;
+    this.merke = merke;
+    this.orsmodell = orsmodell;
+    this.hastighet = hastighet;
+  }
+  gass() {
+     return this.hastighet += 10;
+  }
+  brems() {
+    return this.hastighet -= 10;
+  }
+}
+
+let Anniken = new Bil("54321","Volvo", 2011, 15);
+let Jonathan = new Bil("45678", "Sabb", 2005, 0);
+let Marion = new Bil("98765", "Ford", 2016, 0);
+
+
+function skrivUt() {
+document.getElementById('utdata').innerHTML = "Anniken " + Anniken.hastighet + "km/t" + "<br>";
+document.getElementById('utdata1').innerHTML = "Jonathan " + Jonathan.hastighet + "km/t" + "<br>";
+document.getElementById('utdata2').innerHTML = "Marion " + Marion.hastighet + "km/t" + "<br>";
+}
+
+    </script>
+  </body>
+</html>
